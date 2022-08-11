@@ -1,3 +1,6 @@
 [submodule "main/colcon_ws/src/octomap_msgs"]
 	path = main/colcon_ws/src/octomap_msgs
 	url = git@github.com:OctoMap/octomap_msgs.git
+[submodule "main/colcon_ws/src/pcl_msgs"]
+	path = main/colcon_ws/src/pcl_msgs
+	url = https://github.com/ros-perception/pcl_msgs.git
