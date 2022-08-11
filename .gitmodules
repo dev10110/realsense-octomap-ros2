@@ -1,0 +1,3 @@
+[submodule "main/colcon_ws/src/octomap_msgs"]
+	path = main/colcon_ws/src/octomap_msgs
+	url = git@github.com:OctoMap/octomap_msgs.git
