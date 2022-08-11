@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  realsense:
+    build:
+      context: ./main
+      dockerfile: Dockerfile
+    tty: true
+    image: ros2-realsense
+  
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./main/colcon_ws:/root/colcon_ws
+
+    environment:
+      DISPLAY: ${DISPLAY}
+    
+    privileged: true
+    network_mode: "host"  
+
+    #   rviz:
+    #     build:
+    #       context: ./rviz
+    #       dockerfile: Dockerfile
+    #     tty: true
+    #     image: ros2-rviz
+    #     command: [
+    #       "rviz2",
+    #     ]
+    #     volumes:
+    #       - /tmp/.X11-unix:/tmp/.X11-unix
+    #     environment:
+    #       DISPLAY: ${DISPLAY}
+    #   
+    #     network_mode: "host"  
+    #     
