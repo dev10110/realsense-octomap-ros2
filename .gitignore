@@ -2,4 +2,4 @@
 **/colcon_ws/install/
 **/colcon_ws/log/
 
-**/__pycache/
+**/__pycache__
