@@ -36,14 +36,21 @@ def generate_launch_description():
                 get_package_share_directory('realsense2_camera'),'launch'),
                 '/rs_launch.py']),
             launch_arguments = {
-                'pointcloud.enable': 'true',
-                'decimation': '8',
-                'clip_distance': '1.0'
+                'config_file': '"/root/colcon_ws/src/launch/config_d455.yaml"',
                 }.items()
+            )
+
+    ## Process PCL
+    pcl_node = Node(
+            package='process_pcl',
+            namespace='',
+            executable='process_pcl',
+            name='process_pcl',
             )
 
     return LaunchDescription([
         realsense_launch,
         octomap_launch,
-        rviz_node
+        rviz_node ,
+        #pcl_node
         ])
